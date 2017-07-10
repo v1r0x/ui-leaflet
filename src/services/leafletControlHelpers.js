@@ -49,7 +49,7 @@ angular.module('ui-leaflet').factory('leafletControlHelpers', function ($rootSco
         if(defaults.controls.layers && isDefined(defaults.controls.layers.control)) {
 			control = defaults.controls.layers.control.apply(this, [[], [], controlOptions]);
 		} else {
-			control = new L.control.layers([], [], controlOptions);
+			control = new L.control.layers({}, {}, controlOptions);
 		}
 
         return control;
